@@ -1,0 +1,16 @@
+services:
+  lightning_charge_field:
+    class: Drupal\lightning_charge_field\LightningChargeFieldService
+    arguments:
+      - '@request_stack'
+      - '@session'
+      - '@database'
+      - '@current_user'
+      - '@config.factory'
+      - '@lightning_charge'
+  lightning_charge_field.event_subscriber:
+    class: Drupal\lightning_charge_field\EventSubscriber\LightningChargeFieldEventSubscriber
+    arguments:
+      - '@entity_type.manager'
+    tags:
+      - { name: event_subscriber }

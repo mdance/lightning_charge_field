@@ -1,0 +1,8 @@
+name: Lightning Charge Field
+type: module
+description: 'Provides lightning charge field functionality.'
+package: Lightning
+core_version_requirement: ^8 || ^9
+dependencies:
+  - lightning_charge
+  - fallback_formatter

@@ -1,0 +1,44 @@
+<?php
+/**
+ * @file
+ * Provides install and update hooks.
+ */
+
+use Drupal\lightning_charge_field\LightningChargeFieldConstants;
+
+/**
+ * Implements hook_schema().
+ */
+function lightning_charge_field_schema() {
+  $output[LightningChargeFieldConstants::TABLE_INVOICES] = [
+    'fields' => [
+      'id' => [
+        'descriptipn' => 'Provides the id',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'invoice_id' => [
+        'description' => 'Provides the invoice id',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'hash' => [
+        'description' => 'Provides the invoice hash',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'hash' => [
+        'hash',
+      ],
+    ],
+  ];
+
+  return $output;
+}

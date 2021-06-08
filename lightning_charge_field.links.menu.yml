@@ -1,0 +1,5 @@
+lightning_charge_field.settings:
+  title: 'Fields'
+  description: 'Configure lightning charge fields functionality.'
+  route_name: lightning_charge_field.settings
+  parent: lightning_charge.settings

@@ -1,0 +1,7 @@
+lightning_charge_field.settings:
+  path: '/admin/config/services/lightning-charge/field'
+  defaults:
+    _form: '\Drupal\lightning_charge_field\Form\SettingsForm'
+    _title: 'Lightning Charge Field'
+  requirements:
+    _permission: 'administer lightning_charge_field'

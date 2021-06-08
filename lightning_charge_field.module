@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Provides lightning charge field functionality.
+ */
+
+/**
+ * Implements hook_field_formatter_info_alter().
+ */
+function lightning_charge_field_field_formatter_info_alter(array &$info) {
+  $key = 'lightning_charge_payment';
+
+  if (isset($info[$key])) {
+    $instance = &$info[$key];
+
+    /** @var \Drupal\Component\Plugin\PluginManagerInterface $manager */
+    $manager = \Drupal::service('plugin.manager.field.field_type');
+
+    $definitions = $manager->getDefinitions();
+
+    foreach ($definitions as $key => $definition) {
+      $instance['field_types'][] = $key;
+    }
+  }
+}

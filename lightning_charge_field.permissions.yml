@@ -1,0 +1,4 @@
+administer lightning_charge_field:
+  title: 'Administer Lightning Charge Fields'
+  description: 'Configure the lightning charge fields functionality.'
+  restrict access: TRUE

@@ -1,0 +1,5 @@
+price_mode: 'custom'
+price:
+  number: '0.00'
+  currency_code: 'USD'
+hide: false
